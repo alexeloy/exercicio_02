@@ -1,0 +1,58 @@
+### Cria um novo Personagem
+POST http://localhost:3000/characters
+Content-Type: application/json
+
+{
+  "name": "Alex Eloy",
+  "status": "Alive",
+  "species": "Humanoid",
+  "type": "Phone-Person",
+  "gender": "Male",
+  "origin": {
+    "name": "Earth (Phone Dimension)",
+    "url": "https://rickandmortyapi.com/api/location/72"
+  },
+  "location": {
+    "name": "Earth (Phone Dimension)",
+    "url": "https://rickandmortyapi.com/api/location/72"
+  },
+  "image": "https://rickandmortyapi.com/api/character/avatar/404.jpeg",
+  "episode": [
+    "https://rickandmortyapi.com/api/episode/8"
+  ],
+  "url": "https://rickandmortyapi.com/api/character/404"
+}
+
+### Obtem todos os Personagens
+GET http://localhost:3000/characters
+
+### Obtem um simples personagem pelo seu ID
+GET http://localhost:3000/characters/{id}
+
+### Atualiza o personagem
+PUT http://localhost:3000/characters/{id}
+Content-Type: application/json
+
+{
+  "name": "Michael Jackson Updated",
+  "status": "Alive",
+  "species": "Humanoid",
+  "type": "Phone-Person",
+  "gender": "Male",
+  "origin": {
+    "name": "Earth (Phone Dimension)",
+    "url": "https://rickandmortyapi.com/api/location/72"
+  },
+  "location": {
+    "name": "Earth (Phone Dimension)",
+    "url": "https://rickandmortyapi.com/api/location/72"
+  },
+  "image": "https://rickandmortyapi.com/api/character/avatar/404.jpeg",
+  "episode": [
+    "https://rickandmortyapi.com/api/episode/8"
+  ],
+  "url": "https://rickandmortyapi.com/api/character/404"
+}
+
+### Exclui um personagem com o id especifico
+DELETE http://localhost:3000/characters/{id}
